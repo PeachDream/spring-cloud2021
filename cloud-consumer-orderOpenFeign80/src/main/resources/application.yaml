@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+#配置service的日志级别为debug 这个配置和mybatis的一致
+logging:
+  level:
+    com.peach.springcloud.service.PaymentService: debug
+spring:
+  application:
+    name: openfeign-consumer

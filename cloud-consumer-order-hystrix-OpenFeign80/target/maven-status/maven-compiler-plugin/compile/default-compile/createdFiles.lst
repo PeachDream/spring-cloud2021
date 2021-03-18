@@ -1,0 +1,3 @@
+com\peach\springcloud\service\HystrixService.class
+com\peach\springcloud\service\HystrixFallbackService.class
+com\peach\springcloud\controller\HystrixController.class

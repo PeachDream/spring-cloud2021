@@ -1,0 +1,8 @@
+com\peach\springcloud\lb\OwnLb.class
+com\peach\springcloud\config\PeachLoadBalancer.class
+com\peach\springcloud\controller\OrderController.class
+com\peach\springcloud\lb\LoadBalance.class
+com\peach\springcloud\config\ApplicationContextConfig.class
+com\peach\springcloud\MainOrder80.class
+com\peach\springcloud\config\CustomLoadBalancerConfiguration.class
+com\peach\myrule\MyselfRule.class

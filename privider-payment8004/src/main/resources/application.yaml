@@ -1,0 +1,11 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: cloud-payment-service
+
+  cloud:
+    zookeeper:
+      #集群配置也相当简单 我们只需要在connect-string 中通过逗号分隔多个zookeeper服务即可
+      connect-string: 127.0.0.1:2181

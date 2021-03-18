@@ -1,0 +1,3 @@
+com\peach\springcloud\config\ApplicationContextConfig.class
+com\peach\springcloud\ApplicationConsumer80.class
+com\peach\springcloud\controller\ConsumerController.class

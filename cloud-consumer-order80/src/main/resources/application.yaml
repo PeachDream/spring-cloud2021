@@ -1,0 +1,17 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-order
+
+
+eureka:
+  client:
+    # 是否注入进eureka
+    register-with-eureka: true
+    # 是否从eurekaService抓取已有的注册信息， 默认为true 如果单点无所谓 如果是集群 那么需要配合ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka

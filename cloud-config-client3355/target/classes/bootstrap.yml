@@ -1,0 +1,17 @@
+server:
+  port: 3355
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
+spring:
+  application:
+    name: cloud-config-client
+  cloud:
+    config:
+      label: master  #这里我的是main分支 但是还是要填写master才能够访问
+      name: config #配置文件
+      profile: dev #文件后缀
+      uri: http://localhost:3344
+

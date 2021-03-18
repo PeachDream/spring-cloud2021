@@ -1,0 +1,50 @@
+server:
+  port: 8001
+
+
+
+spring:
+  datasource:
+    password: sxt510922
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/scpayment?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=FALSE
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    #    配置服务名称 这里的名称也就是 服务注册中心的名字 不过是全大写
+    # 当前这个application.name 在服务注册中心的名字就是 CLOUD-PAYMENT-SERVICE
+    name: cloud-payment-service
+
+
+mybatis:
+#  可以通过全类名指代mapper.xml文件中的返回类型resultType
+  type-aliases-package: com.peach.springcloud.entity
+  mapper-locations: classpath:mappers/*Mapper.xml
+  #  设置驼峰命名方法
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.peach.information.mapper: debug
+
+eureka:
+  client:
+    # 是否注入进eureka
+    register-with-eureka: true
+    # 是否从eurekaService抓取已有的注册信息， 默认为true 如果单点无所谓 如果是集群 那么需要配合ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+#      defaultZone: http://localhost:7001/eureka
+      #将这个服务提供者 注册进连个注册中心
+      defaultZone: http://eureka7001.com:7001/eureka
+#      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+  instance:
+#    这个配置用于在eurekaserver界面中显示名称的 替代网络地址+端口号的方式
+    instance-id: payment8001
+#    这个配置用于设置访问路径是否显示ip地址
+    prefer-ip-address: true
+#    #eureka客户端向服务端发送心跳的间隔 单位为秒 默认是30s
+#    lease-renewal-interval-in-seconds: 1
+#    #eureka 服务端第一次收到了客户端的心跳之后 等待的时间上线 默认是90秒 超过这个时间将剔除服务
+#    lease-expiration-duration-in-seconds: 2

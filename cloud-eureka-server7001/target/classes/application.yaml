@@ -1,0 +1,25 @@
+server:
+  port: 7001
+
+eureka:
+#  server:
+#    #这个配置是server中配置的 用于关闭自我保护 这样一旦有微服务断线了直接剔除 不会再等待
+#    # 在页面会显示 THE SELF PRESERVATION MODE IS TURNED OFF. THIS MAY NOT PROTECT INSTANCE EXPIRY IN CASE OF NETWORK/OTHER PROBLEMS.
+#    enable-self-preservation: false
+#    #判断这个微服务是否存在的心跳监测一旦断开超过这个时间 就会触发自我保护
+#    eviction-interval-timer-in-ms: 2000
+
+
+  instance:
+    hostname: eureka7001.com  #eureka服务端的实例名称 这里就不写application.name了
+
+  client:
+    register-with-eureka: false #false 表示不向服务端注册自己
+    #通过下面的配置来确定谁是注册中心
+    fetch-registry: false #false 表示我就是注册中心 我的职责是维护服务实例 不需要去检索服务
+    service-url:
+      #eureka 交互的地址和查询注册服务都需要这个地址 在客户端就填写这个地址
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #如果是多个集群 就需要在这里填写上其他所有服务器的注册地址
+      defaultZone: http://eureka7001.com:7001/eureka/
+#      defaultZone: http://eureka7002.com:7002/eureka/
