@@ -1,0 +1,24 @@
+server:
+  port: 8402
+spring:
+  application:
+    name: cloud-sentinel-service8402
+  cloud:
+    nacos:
+      discovery:
+        #服务注册地址 我这里使用的是nginx代理的地址
+        server-addr: 192.168.31.111:1111
+    sentinel:
+      transport:
+#        设置dashboard的地址
+        dashboard: 192.168.31.185:8858
+#        dashboard: 127.0.0.1:8868
+        #默认从8719开始扫描 每次+1 直到找到没有被占用的端口
+        port: 8719
+        #配置中显示指定客户机的ip 这样sentinel发送数据的时候才能够准确定位到ip
+        clientIp: 192.168.31.123
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

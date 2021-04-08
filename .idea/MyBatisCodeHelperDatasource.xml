@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="addSerializeUid" value="true" />
+        <option name="generateService" value="true" />
+        <option name="javaMapperPackage" value="com.test.mapper" />
+        <option name="javaMapperPath" value="$PROJECT_DIR$/test-model/src/main/java" />
+        <option name="javaModelPackage" value="com.test.entity" />
+        <option name="javaModelPath" value="$PROJECT_DIR$/test-model/src/main/java" />
+        <option name="lastDatabaseCrudChooseModuleName" value="test-model" />
+        <option name="lombokGetterSetterAnnotation" value="true" />
+        <option name="mapperAnnotaion" value="true" />
+        <option name="modelAddEqualHashCode" value="true" />
+        <option name="modelAddToString" value="true" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="cloud-consumer-order-hystrix-OpenFeign80">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.test.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/cloud-consumer-order-hystrix-OpenFeign80/src/main/java" />
+                  <option name="javaModelPacakge" value="com.test.entity" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/cloud-consumer-order-hystrix-OpenFeign80/src/main/java" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/cloud-consumer-order-hystrix-OpenFeign80/src/main/java" />
+                  <option name="javaServicePackage" value="com.test.service" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/cloud-consumer-order-hystrix-OpenFeign80/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/cloud-consumer-order-hystrix-OpenFeign80/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="test-model">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.test.mapper" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/test-model/src/main/java" />
+                  <option name="javaModelPacakge" value="com.test.entity" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/test-model/src/main/java" />
+                  <option name="javaServicePackage" value="com.test.service" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/test-model/src/main/java" />
+                  <option name="xmlPackage" value="mapper" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/test-model/src/main/resources" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="seata_order:t_order">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="TOrder" />
+                  <option name="moduleName" value="test-model" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="xmlMapperPackage" value="mapper" />
+        <option name="xmlMapperPath" value="$PROJECT_DIR$/test-model/src/main/resources" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>

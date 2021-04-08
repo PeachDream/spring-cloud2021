@@ -1,0 +1,45 @@
+server:
+  port: 2002
+spring:
+  application:
+    name: seata-storage-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: peach-tx-group  #seata事务组名称，对应file.conf文件
+    nacos:
+      discovery:
+        server-addr: 192.168.31.111:1111
+    sentinel:
+      transport:
+        dashboard: 192.168.31.185:8858
+        clientIp: 192.168.31.123
+        port: 8719
+      #数据库配置
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    name: storageDataSource
+    druid:
+      initial-size: 2
+      max-active: 20
+      min-idle: 2
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.31.185:3306/seata_storage?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Hongkong&useSSL=false
+      username: root
+      password: sxt510922
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+mybatis:
+  #  可以通过全类名指代mapper.xml文件中的返回类型resultType
+  type-aliases-package: com.peach.springcloud.entity
+  mapper-locations: classpath:mappers/*Mapper.xml
+  #  设置驼峰命名方法
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.peach.springcloud.mapper: debug

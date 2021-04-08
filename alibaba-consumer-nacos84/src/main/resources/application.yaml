@@ -1,0 +1,32 @@
+server:
+  port: 84
+spring:
+  application:
+    name: cloudalibaba-order-consumer84
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.31.111:1111
+    sentinel:
+      transport:
+        client-ip: 192.168.31.123
+        port: 8719
+#        dashboard需要设置到端口上
+        dashboard: 192.168.31.185:8858
+      datasource: #将我们的限流规则放入nacos中 当然可以放入其他数据源
+        ds1:
+          nacos:
+            server-addr: 192.168.31.111:1111
+            data-id: cloudalibaba-order-consumer84
+            group-id: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow  # rule-type指的是在数据源规则类型flow（flow，degrade，authority，system, param-flow, gw-flow, gw-api-group）。
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+feign:
+  sentinel:
+    enabled: true

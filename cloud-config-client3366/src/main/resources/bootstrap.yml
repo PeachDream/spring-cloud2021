@@ -1,0 +1,33 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+server:
+  port: 3366
+spring:
+  application:
+    name: cloud-config-client
+  cloud:
+    config:
+      #这就是官网的 /分支/{项目名称}-{环境}.yaml 这里是config-dev.yaml
+      label: master  #这里我的是main分支 但是还是要填写master才能够访问
+      name: config #配置文件
+      profile: dev #文件后缀
+      uri: http://localhost:3344 #这里写的是配置中心的地址
+    discovery:
+      enabled: true
+      service-id: cloud-config-center
+      #这里的5672 是mq的访问端口 15672是管理界面的端口
+  rabbitmq:
+    port: 5672
+    host: localhost
+    username: guest
+    password: guest
+
+
+#暴露所有的监控端点 可以使用actuator进行监控 包括health和info啥的
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

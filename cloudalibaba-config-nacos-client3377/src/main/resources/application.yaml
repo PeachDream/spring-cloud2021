@@ -1,0 +1,6 @@
+#约定配置文件的前缀
+spring:
+  profiles:
+    active: dev
+#    active: test
+#    active: info

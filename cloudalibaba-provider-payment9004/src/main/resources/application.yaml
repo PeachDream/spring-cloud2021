@@ -1,0 +1,36 @@
+server:
+  port: 9004
+spring:
+  datasource:
+    password: sxt510922
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/scpayment?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=FALSE
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: cloudalibaba-provider-payment
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.31.111:1111
+    sentinel:
+      transport:
+        client-ip: 192.168.31.123
+        dashboard: 192.168.31.185:8858
+        port: 8719
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+mybatis:
+  #  可以通过全类名指代mapper.xml文件中的返回类型resultType
+  type-aliases-package: com.peach.springcloud.entity
+  mapper-locations: classpath:mappers/*Mapper.xml
+  #  设置驼峰命名方法
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.peach.springcloud.mapper: debug
