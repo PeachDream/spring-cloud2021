@@ -25,6 +25,11 @@ public class HystrixController {
         return result;
     }
 
+    @GetMapping("/payment/hystrix/zipkin")
+    public String zipkin(){
+        return "请求到了zipkin~~~";
+    }
+
 
     @GetMapping("/payment/hystrix/timeout/{id}")
     public String paymentInfoTimeout(@PathVariable("id") Long id){

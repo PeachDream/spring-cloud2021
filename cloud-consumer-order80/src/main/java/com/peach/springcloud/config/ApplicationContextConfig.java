@@ -15,7 +15,7 @@ public class ApplicationContextConfig {
 
     //将这个对象放入ioc容器
     @Bean
-//    @LoadBalanced  //使用这个注解给restTemplate赋予了负载均衡的能力
+    @LoadBalanced  //使用这个注解给restTemplate赋予了负载均衡的能力
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }

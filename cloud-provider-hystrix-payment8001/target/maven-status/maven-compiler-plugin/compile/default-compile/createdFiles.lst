@@ -1,2 +1,3 @@
 com\peach\springcloud\ApplicationHystrixPaymentProvider8001.class
 com\peach\springcloud\service\HystrixServiceImpl.class
+com\peach\springcloud\controller\HystrixController.class

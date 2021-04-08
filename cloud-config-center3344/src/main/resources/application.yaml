@@ -17,4 +17,76 @@ spring:
 #          uri: https://github.com/PeachDream/springcloud-config.git
           search-paths:
             - springcloud-config
+          ignoreLocalSshSettings: true
+          # tood 笔记 注意 这里需要的是RSA格式私钥 生成方式的是 ssh-keygen -m PEM -t rsa -b 4096 -C "****"
+          privateKey: |
+            -----BEGIN RSA PRIVATE KEY-----
+            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
+            -----END RSA PRIVATE KEY-----
+
       label: main  #这里我的是main分支 但是还是要填写master才能够访问
+
+#设置rabbitmq相关参数
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+    port: 5672
+#暴露bus-refresh的端点 可以通过调用actuator/bus-refresh进行配置的全部重新加载
+# curl -X POST "http://localhost:3344/actuator/busrefresh" 这里如果加了  - 会报错那么可以直接不加
+# 如果需要定点通知 也就是通知某一个就需要下面的写法 微服务名称:端口号
+#curl -X POST "http://localhost:3344/actuator/busrefresh/你的微服务名称:端口号"
+#curl -X POST "http://localhost:3344/actuator/busrefresh/cloud-config-client:3355"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"

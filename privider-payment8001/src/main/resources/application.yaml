@@ -37,8 +37,8 @@ eureka:
     service-url:
 #      defaultZone: http://localhost:7001/eureka
       #将这个服务提供者 注册进连个注册中心
-      defaultZone: http://eureka7001.com:7001/eureka
-#      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+#      defaultZone: http://eureka7001.com:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
   instance:
 #    这个配置用于在eurekaserver界面中显示名称的 替代网络地址+端口号的方式
     instance-id: payment8001

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/alibaba-consumer-nacos84/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/alibaba-consumer-nacos84/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-api-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-api-commons/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-comsymer-hystrix-dashboard9001/src/main/java" charset="UTF-8" />
@@ -9,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/cloud-config-center3344/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-config-client3355/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-config-client3355/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-config-client3366/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-config-client3366/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-order-hystrix-OpenFeign80/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-order-hystrix-OpenFeign80/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-consumer-order80/src/main/java" charset="UTF-8" />
@@ -27,6 +31,28 @@
     <file url="file://$PROJECT_DIR$/cloud-gateway-gateway9527/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cloud-provider-hystrix-payment8001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-stram-rabbitmq-consumer8802/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-stram-rabbitmq-consumer8802/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-stram-rabbitmq-consumer8803/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-stram-rabbitmq-consumer8803/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-stream-rabbitmq-provider8801/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-stream-rabbitmq-provider8801/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-config-nacos-client3377/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-consumer-order83/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-consumer-order83/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9002/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9003/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9004/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-provider-payment9004/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-sentinel-service8401/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-sentinel-service8402/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloudalibaba-sentinel-service8402/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/privider-consul-payment8006/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/privider-consul-payment8006/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/privider-consul-payment8007/src/main/java" charset="UTF-8" />
@@ -37,5 +63,11 @@
     <file url="file://$PROJECT_DIR$/privider-payment8002/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/privider-payment8004/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/privider-payment8004/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-account-service2003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-account-service2003/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-order-service2001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-order-service2001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-storage-service2002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seata-storage-service2002/src/main/resources" charset="UTF-8" />
   </component>
 </project>

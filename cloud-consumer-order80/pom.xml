@@ -12,6 +12,18 @@
     <artifactId>cloud-consumer-order80</artifactId>
 
     <dependencies>
+<!--        链路追踪-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <version>2.2.7.RELEASE</version>
+        </dependency>
+
+        <!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-sleuth</artifactId>-->
+<!--        </dependency>-->
+
 <!--        web actuator  starter 不用多说 标配图形化展示-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -34,14 +46,6 @@
 <!--            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>-->
 <!--            <version>2.2.6.RELEASE</version>-->
 <!--        </dependency>-->
-
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-            <version>${spring.cloud.alibaba.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
 
 <!--    热部署-->
         <dependency>

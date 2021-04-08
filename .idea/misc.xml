@@ -11,6 +11,8 @@
       <set>
         <option value="$PROJECT_DIR$/cloud-config-client3344/pom.xml" />
         <option value="$PROJECT_DIR$/cloud-provider-payment8001/pom.xml" />
+        <option value="$PROJECT_DIR$/seata_storage-service2002/pom.xml" />
+        <option value="$PROJECT_DIR$/test-model/pom.xml" />
         <option value="$PROJECT_DIR$/test/pom.xml" />
       </set>
     </option>

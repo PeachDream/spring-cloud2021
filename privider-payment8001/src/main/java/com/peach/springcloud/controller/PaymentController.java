@@ -69,6 +69,11 @@ public class PaymentController {
         return discoveryClient;
     }
 
+    @GetMapping("/zipkin")
+    public String zipkin(){
+        return "zipkin 从provider返回了，端口号:"+this.serverPort;
+    }
+
     @GetMapping("/lb")
     public String lbprovider(){
         return "从provider返回了，端口号:"+this.serverPort;
