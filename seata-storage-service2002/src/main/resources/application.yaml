@@ -1,21 +1,45 @@
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: peach-service-group
+  service:
+    vgroup-mapping:
+      peach-service-group: default
+    disable-global-transaction: false
+  config:
+    type: nacos
+    nacos:
+      server-addr: 192.168.31.111:1111
+      group: "SEATA_GROUP"
+      namespace: ""
+      username: "nacos"
+      password: "nacos"
+  registry: # seata去nacos注册中心找到 SEATA_GROUP 中的 seata-server
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 192.168.31.111:1111
+      group : "SEATA_GROUP"
+      namespace: ""
+      username: "nacos"
+
+      password: "nacos"
+
 server:
   port: 2002
 spring:
   application:
     name: seata-storage-service
   cloud:
-    alibaba:
-      seata:
-        tx-service-group: peach-tx-group  #seata事务组名称，对应file.conf文件
-    nacos:
-      discovery:
-        server-addr: 192.168.31.111:1111
     sentinel:
       transport:
         dashboard: 192.168.31.185:8858
         clientIp: 192.168.31.123
         port: 8719
       #数据库配置
+    nacos:
+      discovery:
+        server-addr: 192.168.31.111:1111
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     name: storageDataSource

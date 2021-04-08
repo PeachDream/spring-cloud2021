@@ -1,21 +1,47 @@
+#这个seata是直接顶格开始的 我之前就是从spring.cloud开始写的所以一直找不到group
+seata:
+  enabled: true #开启seata
+  application-id: ${spring.application.name} #设置应用id
+  tx-service-group: peach-service-group #设置服务事务组id 记住这个名字 peach-service-group在nacos配置中心的seata的配置中要用到
+  service:
+    vgroup-mapping:
+      peach-service-group: default #设置分组的集群名称 也要注意这个default在nacos配置中心的seata的配置中要用到
+    disable-global-transaction: false #是否关闭全局事务 选择否 不关闭
+  config: #服务端seata的配置中心 也就是服务端的配置从哪里获取
+    type: nacos #使用nacos 从nacos中获取
+    nacos:
+      server-addr: 192.168.31.111:1111 #地址和端口
+      group: "SEATA_GROUP" #配置中心的分组 这个和server端的registry.conf中的config.group值要相等 才能保证用的配置一致 特别是上传seata配置到nacos配置中心的时候
+      namespace: "" #默认命名空间
+      username: "nacos" #nacos账号密码
+      password: "nacos"
+  registry: #设置客户端的服务注册中心以及从注册中心发现server
+    type: nacos #类型nacos
+    nacos:
+      application: seata-server #server在服务注册中心中的名字
+      server-addr: 192.168.31.111:1111 #nacos的地址
+      group : "SEATA_GROUP" #分组
+      namespace: "" #命名空间
+      username: "nacos" #nacos账号密码
+      password: "nacos"
+
+#下面是应用级别的配置
 server:
   port: 2003
 spring:
   application:
     name: seata-account-service
   cloud:
-    alibaba:
-      seata:
-        tx-service-group: peach-tx-group  #seata事务组名称，对应file.conf文件
-    nacos:
-      discovery:
-        server-addr: 192.168.31.111:1111
+    #sentinel nacos是从spring.cloud开始的
     sentinel:
       transport:
         dashboard: 192.168.31.185:8858
         clientIp: 192.168.31.123
         port: 8719
       #数据库配置
+    nacos:
+      discovery:
+        server-addr: 192.168.31.111:1111
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     name: storageDataSource

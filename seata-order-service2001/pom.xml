@@ -12,15 +12,22 @@
     <artifactId>seata-order-service2001</artifactId>
 
     <dependencies>
+        <!--        lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.18</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>io.seata</groupId>
             <artifactId>seata-spring-boot-starter</artifactId>
-            <version>1.4.0</version>
+            <version>1.4.1</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
-            <version>2.2.0.RELEASE</version>
             <exclusions>
                 <exclusion>
                     <groupId>io.seata</groupId>
@@ -28,8 +35,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-
         <!--        引入sentinel 熔断限流服务-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
@@ -39,19 +44,11 @@
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
-            <version>1.8.0</version>
         </dependency>
         <!--        引入nacos-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-ribbon -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-            <version>2.2.7.RELEASE</version>
         </dependency>
 
         <!--        服务调用 openfeign-->
@@ -154,6 +151,5 @@
         <!--            </plugin>-->
         <!--        </plugins>-->
     </build>
-
 
 </project>

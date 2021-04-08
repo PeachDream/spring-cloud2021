@@ -1,27 +1,45 @@
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: peach-service-group
+  service:
+    vgroup-mapping:
+      peach-service-group: default
+    disable-global-transaction: false
+  config:
+    type: nacos
+    nacos:
+      server-addr: 192.168.31.111:1111
+      group: "SEATA_GROUP"
+      namespace: ""
+      username: "nacos"
+      password: "nacos"
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: 192.168.31.111:1111
+      group : "SEATA_GROUP"
+      namespace: ""
+      username: "nacos"
+
+      password: "nacos"
+
 server:
   port: 2001
 spring:
   application:
     name: seata-order-service
   cloud:
-    alibaba:
-      seata:
-        applicationId: ${spring.application.name}
-        tx-service-group: default
-        service:
-          vgroupMapping:
-            default: default
-          grouplist:
-            default: 127.0.0.1:8091
-    nacos:
-      discovery:
-        server-addr: 192.168.31.111:1111
     sentinel:
       transport:
         dashboard: 192.168.31.185:8858
         clientIp: 192.168.31.123
         port: 8719
       #数据库配置
+    nacos:
+      discovery:
+        server-addr: 192.168.31.111:1111
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     name: storageDataSource
@@ -30,9 +48,9 @@ spring:
       max-active: 20
       min-idle: 2
       driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.31.185:3306/seata_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Hongkong&useSSL=false
       username: root
       password: sxt510922
-      url: jdbc:mysql://192.168.31.185:3306/seata_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Hongkong&useSSL=false
 management:
   endpoints:
     web:
@@ -49,9 +67,3 @@ mybatis:
 logging:
   level:
     com.peach.springcloud.mapper: debug
-
-feign:
-  sentinel:
-    enabled: true
-  hystrix:
-    enabled: true
